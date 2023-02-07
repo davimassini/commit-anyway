@@ -3,11 +3,12 @@ import sys
 import random
 import requests
 
+PATH_ACTUAL = sys.argv[0].replace("\pick_a_number.py", "")
 PATH_FOLDER = sys.argv[1]
 RANDOM = random.randint(0, 20)
 
 def open_and_write():
-    with open("ascii_art.txt", "r+") as ascii_art:
+    with open(r'{}\ascii_art.txt'.format(PATH_ACTUAL), "r+") as ascii_art:
         with open(r'{}\README.md'.format(PATH_FOLDER), "a+") as readme_md:
             content = ascii_art.read()
             ascii_art.seek(0)

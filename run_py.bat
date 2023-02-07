@@ -1,3 +1,3 @@
 @echo off
-python pick_a_number.py "$ARG1"
+python "$ROOT_FOLDER\pick_a_number.py" "$GIT_FOLDER"
 pause
